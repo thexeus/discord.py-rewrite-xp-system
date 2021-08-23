@@ -18,14 +18,10 @@ class Level(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-
         
         user = message.author.id
         new_xp = random.choice(range(5,25))
        
-            
-        
-
         for current_user in level['users']:
             last_xp= int(current_user['xp'])
             current_xp = last_xp + new_xp
